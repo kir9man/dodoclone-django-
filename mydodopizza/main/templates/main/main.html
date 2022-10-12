@@ -1,0 +1,30 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% load main_tags %}
+
+{% block styles%}
+    <link type="text/css" href="{% static 'main/css/main-styles.css' %}" rel="stylesheet" />
+{% endblock  %}
+
+{% block content %}
+    <div class="pizza-container container">
+        <h2 id="pizza">Пицца</h2>
+        <div class="pizza-content">
+            {% for p in pizza %}
+                <article class="pizza-form">
+                    <img src="{{ p.main_picture.url }}">
+                    <p class="pizza-name">{{ p.name }}</p>
+                    <p class="pizza-description">
+                        {{ ingredients_list|index:forloop.counter0 }}
+                    </p>
+                    <div class="pizza-footer">
+                        <p>от {{ p.cost_small_pizza }} ₽</p>
+                        <button>Выбрать</button>
+                    </div>
+                </article>
+
+            {% endfor %}
+
+        </div>
+    </div>
+{%  endblock %}

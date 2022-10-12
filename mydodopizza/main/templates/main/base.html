@@ -1,0 +1,185 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link type="text/css" href="{% static 'main/css/base-styles.css' %}" rel="stylesheet" />
+    {% block styles%}
+
+    {% endblock styles %}
+
+    <meta charset="UTF-8">
+    <title>Май пейдж</title>
+</head>
+<body>
+    <header>
+        <div class="header-container container">
+            <div class="main-logo">
+                <a href="#">
+                    <img class="logo" src="{% static 'main/images/main-logo.jpg' %}">
+                    <div class="logo-text">
+                        <img src="{% static 'main/images/dodotext.png' %}">
+<!--                        <img src="{% static 'main-page/images/dodo-text.png' %}">-->
+                        <span> Сеть пиццерий № 1 в России </span>
+                    </div>
+                </a>
+                <div class="pizza-title">
+                    <h1>Доставка пиццы Томск</h1>
+                    <div class="info">
+                        <p># мин  4.8</p>
+                        <img class="star" src="{% static 'main/images/grade.ico' %}">
+                    </div>
+                </div>
+            </div>
+            <button class="user-menu" type="button">
+                Войти
+            </button>
+        </div>
+    </header>
+
+    <nav>
+        <div class="nav-container container">
+            <div class="menu">
+            <img src="{% static 'main/images/dodo-logo.svg' %}" >
+            <ul class="nav-list">
+                <li><a href="#">Пицца</a></li>
+                <li><a href="#">Комбо</a></li>
+                <li><a href="#">Закуски</a></li>
+                <li><a href="#">Десерты</a></li>
+                <li><a href="#">Напитки</a></li>
+                <li><a href="#">Другие товары</a></li>
+                <li><a href="#">Акции</a></li>
+                <li><a href="#">Контакты</a></li>
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Работа в Додо</a></li>
+            </ul>
+            </div>
+            <button class="basket" type="button">
+                Корзина
+            </button>
+        </div>
+    </nav>
+
+    {% block content%}
+
+    {% endblock content %}
+
+    <div class="secret-buyer">
+        <div class="s-b-container container">
+            <div class="s-b-description">
+<!--                <img src="{% static 'main-page/images/spy-32.ico' %}">-->
+<!--                <img src="{% static 'main-page/images/spy-48.ico' %}">-->
+                <img src="{% static 'main/images/spy-50.png' %}">
+<!--                <img src="{% static 'main-page/images/spy-64.png' %}">-->
+                <p>Стань тайным покупателем Додо Пиццы и получи пиццу в подарок</p>
+            </div>
+            <a class="s-b-link" href="https://dodocontrol.ru/">Заполните анкету</a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container container">
+            <div class="footer-links">
+                <div class="links-left">
+                    <div class="f-list1">
+                        <span>Додо Пицца</span>
+                        <a href="#">О нас</a>
+                        <a href="https://dodobrands.io/ru/post/dodobook1-0/">Додо-книга</a>
+                        <a href="https://sila-uma.ru/aboutdodo/">Блок "Сила ума"</a>
+                        <a href="https://dodo.dev/">Додо ИС</a>
+                    </div>
+                    <div class="f-list2">
+                        <span>Работа</span>
+                        <a href="https://rabotavdodo.ru/?utm_source=web">В пиццерии</a>
+                    </div>
+                    <div class="f-list3">
+                        <span>Партнерам</span>
+                        <a href="https://dodofranchise.ru/">Франшиза</a>
+                        <a href="https://dodoinvest.com/">Инвестиции</a>
+                        <a href="https://bidzaar.com/companies/view/d1827205-1309-4442-8adb-f6887474e684">Поставщикам</a>
+                        <a href="https://www.dodoarenda.ru/">Предложить помещение</a>
+                    </div>
+                    <div class="f-list4">
+                        <span>Это интересно</span>
+                        <a href="https://bezperchatok.ru/">Почему мы готовим без перчаток?</a>
+                        <a href="https://www.dodokids.ru/">Экскурсии и мастер-классы</a>
+                        <a href="https://b2b.dodopizza.org/">Корпоративные заказы</a>
+                    </div>
+                </div>
+                <div class="links-right">
+                    <div class="mobile-apps">
+                        <a href="https://apps.apple.com/RU/app/id894649641?mt=8">
+                            <img src="{% static 'main/images/apple-svg.svg' %}">
+                            <div class="apple-description">
+                                <p class="apple-text">Загрузите в</p>
+                                <p class="apple">App store</p>
+                            </div>
+                        </a>
+                        <a href="https://app.appsflyer.com/ru.dodopizza.app?af_ad=icon&pid=dodopizza.site&af_click_lookback=7d&c=web">
+                            <img src="{% static 'main/images/google-24.png' %}">
+                            <div class="google-description">
+                                <p class="google-text">ДОСТУПНО В</p>
+                                <p class="google">Google play</p>
+                            </div>
+                        </a>
+                        <a href="https://appgallery.huawei.com/app/C101170713?sharePrepath=ag&locale=ru_RU&source=website">
+                            <img class="a-p-img" src="{% static 'main/images/AppGallery.svg' %}">
+                            <div class="app-gallery-description">
+                                <p class="app-gallery-text">ОТКРОЙТЕ В</p>
+                                <p class="app-gallery">AppGallery</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="contacts">
+                        <a href="feedback@dodopizza.com">feedback@dodopizza.com</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-info">
+                <div class="f-i-money">
+                    <span class="money-main">2 929 315 569 ₽</span>
+                    <span class="money-more">
+                        Выручка российской сети в этом месяце. <br>
+                        В прошлом - 4 398 007 260 ₽
+                    </span>
+                </div>
+                <div class="f-i-pizza">
+                    <span class="pizza-main">831 пиццерия</span>
+                    <span class="pizza-more">
+                        в 16 странах, от Великобритании <br>
+                        до Нигерии
+                    </span>
+                </div>
+            </div>
+
+            <div class="footer-end">
+                <div class="f-e-links">
+                    <div class="f-e-help">
+                        <span>ДОДО ПИЦЦА © 2022</span>
+                        <a href="#">Правовая информация</a>
+                        <a href="#">Калорийность и состав</a>
+                        <a href="#">Помощь</a>
+                    </div>
+                    <div class="f-e-channel">
+                        <a href="https://ok.ru/dodopizza">
+                            <img src="{% static 'main/images/odn-ico.svg' %}">
+                        </a>
+                        <a href="https://vk.com/dodo">
+                            <img src="{% static 'main/images/vk.svg' %}">
+                        </a>
+                        <a href="https://www.youtube.com/dodomovie">
+                            <img src="{% static 'main/images/youtube-ico.svg' %}">
+                        </a>
+                    </div>
+                </div>
+                <div class="f-e-info">
+                    <span>C 2022 ООО "Додо Франчайзинг"</span>
+                    <span>ОГРН 1131101001844, ИНН 1101140415</span>
+                    <span>167001, Республика Коми, г. Сыктывкар, Октябрьский проспект, д. 16</span>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+</body>
+</html>
